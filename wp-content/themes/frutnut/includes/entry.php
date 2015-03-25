@@ -27,7 +27,6 @@
 	<div class="post">
 		<div class="text <?php if ($thumb == '' || get_option('simplepress_thumbnails_index') == 'false') print "no_thumb" ?>">
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <span class="line"></span>
 			<?php if (get_option('simplepress_blog_style') == 'false') { ?>
 			<?php truncate_post(400);?>
 			<br class="clear" />

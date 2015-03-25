@@ -15,10 +15,9 @@
                     $titletext = get_the_title();
                     ?>
                     <div class="post">
-                        <h2><?php the_title(); ?></h2>
-                        <span class="line"></span>
-                                <?php the_content(''); ?>
-                            <br class="clear" />
+	                    <h1><?php the_title(); ?></h1>
+                        <?php the_content(''); ?>
+                        <br class="clear" />
                     <?php if (get_option('simplepress_integration_single_bottom') <> '' && get_option('simplepress_integrate_singlebottom_enable') == 'on') echo(get_option('simplepress_integration_single_bottom')); ?>
                     <?php if (get_option('simplepress_468_enable') == 'on') { ?>
                         <?php if(get_option('simplepress_468_adsense') <> '') echo(get_option('simplepress_468_adsense'));

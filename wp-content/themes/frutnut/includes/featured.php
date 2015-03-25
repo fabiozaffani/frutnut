@@ -1,5 +1,7 @@
 <?php
 
+    switch_to_blog(get_current_blog_id());
+
     global $ids;
 	$arr = array();
 	$featured_auto_class = 5000;
@@ -9,7 +11,10 @@
 
     $showPosts = 4;
 
-	query_posts("showposts={$showPosts}&cat=".lang_category_id(5))/* get_catId($featured_cat */;
+    query_posts(array(
+        'post_per_page' => $showPosts,
+        'category_name' => 'destaques'
+    ));
 
 	while (have_posts()) : the_post();
 		global $post;
@@ -38,7 +43,7 @@
                         <h2><?php echo $arr[$i]["title"]; ?></h2>
                         <p><?php echo $arr[$i]["excerpt"]; ?></p>
                         <span class="readmore">
-                            <a href="<?php echo $arr[$i]["permalink"]; ?>"><?php esc_html_e('read more','FrutNut'); ?></a>
+                            <a href="<?php echo $arr[$i]["permalink"]; ?>"><?php esc_html_e('read more','AmazonBrazilNuts'); ?></a>
                         </span>
                     </div>
                 </li>

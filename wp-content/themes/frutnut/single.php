@@ -16,9 +16,7 @@
                             $titletext = get_the_title();
                     ?>
                             <div class="post">
-                                <div class="text <?php if ($thumb == '' || get_option('simplepress_thumbnails') == 'false') print "no_thumb" ?>">
-                                    <h2><?php the_title(); ?></h2>
-                                </div>
+                                <h1><?php the_title(); ?></h1>
                                 <?php the_content(''); ?>
                                 <br class="clear" />
                                 <?php if (get_option('simplepress_integration_single_bottom') <> '' && get_option('simplepress_integrate_singlebottom_enable') == 'on') echo(get_option('simplepress_integration_single_bottom')); ?>
